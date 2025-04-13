@@ -37,7 +37,7 @@ const DropdownButton = () => {
       <Animated.View style={[animatedStyle, { alignItems: 'center' }]}>
         {isExpanded && (
           <Animated.Image 
-            source={require('../assets/images/uploadedImage_20250126_164634.jpg')}
+            source={require('../assets/images/Sample_Upload.jpg')}
             style={[styles.imageStyle, imageAnim]} 
           />
         )}
