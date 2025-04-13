@@ -1,6 +1,6 @@
 # 📱 Cocolisap Detector (WIP)
 
-A mobile app built with **React Native (Expo)** that uses **instance segmentation** to detect *Cocolisap* infestations from captured images. This tool supports field use with role-based access, geolocation tagging, and backend integration for data processing and visualization.
+A mobile app built with **React Native (Expo)** that uses YOLOv5 **instance segmentation** to detect *Cocolisap* infestations from captured or uploaded images. This tool supports field use with role-based access, geolocation tagging, and backend integration for data processing and visualization.
 
 > ⚠️ **Note:** This repository is private and under active development. Not yet ready for public release.
 
@@ -10,20 +10,12 @@ A mobile app built with **React Native (Expo)** that uses **instance segmentatio
 
 - 🔐 **Role-Based Access**  
   - Employees: full access (login, camera, dashboard, history)  
-  - Non-employees: limited access (basic detection only, no login required)
+  - Non-employees: limited access (**No** login required, basic access to dashboard)
 
 - 📷 **Image Capture with Expo Camera**
-- 🌍 **Geolocation Tagging** (city, region, lat/lon, barangay, postal code)
+- 🌍 **Geolocation Tagging** (city, region, country, lat/lon)
 - 🧠 **Cocolisap Detection** via FastAPI + Instance Segmentation
-- 📊 **Data Dashboard** with line and pie charts
+- 📊 **Data Dashboard** with line, pie charts, etc.
 - 🗃️ **Detection History Table** (scrollable + “No Data” fallback)
 
 ---
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/cocolisap-detector.git
-cd cocolisap-detector
