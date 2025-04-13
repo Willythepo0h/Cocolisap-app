@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Alert } from "react-native";
 import { useRouter } from "expo-router";
 import { useResults } from "../context/resultContext";
-import { getLocalApiUrl } from "@/getLocalIP";
+import { getLocalApiUrl } from "@/functions/getLocalIP";
 import * as FileSystem from "expo-file-system";
 
 export function useProcessImage() {

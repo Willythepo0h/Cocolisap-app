@@ -36,7 +36,7 @@ export default function EmployeeScreen() {
     <ThemedView style={styles.container}>
       <ParallaxHeader
         scrollY={scrollY}
-        imageSource={require("../../assets/images/halficon.png")}
+        imageSource={require("../../assets/images/Parallax-icon.png")}
       />
 
       <ScrollView

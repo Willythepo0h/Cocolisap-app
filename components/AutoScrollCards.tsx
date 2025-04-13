@@ -28,17 +28,17 @@ const AutoScrollCards: React.FC<AutoScrollCardsProps> = ({ onCardPress }) => {
         { id: "1", 
             title: "Cocolisap Information", 
             action: () => onCardPress("info"),
-            image: require("../assets/images/cocolisap.png"), 
+            image: require("../assets/images/Cocolisap.png"), 
         },
         { id: "2", 
             title: "Cocolisap Management", 
             action: () => onCardPress("manage"),
-            image: require("../assets/images/manageIconFinal.png")
+            image: require("../assets/images/Cocolisap_management.png")
         },
         { id: "3", 
             title: "PCA Website", 
             action: () => onCardPress("pca"),
-            image: require("../assets/images/pca.png")
+            image: require("../assets/images/PCA.png")
         },
     ]);
 

@@ -32,10 +32,7 @@ function NonEmployeeBottomNavigation() {
 export default function NonEmployeeLayout() {
   return (
     <Stack.Navigator>
-      {/* Tabs as the main screen */}
       <Stack.Screen name="NonEmployeeMainTabs" component={NonEmployeeBottomNavigation} options={{ headerShown: false }} />
-
-      {/* Individual Screens */}
       <Stack.Screen name="cocolisapInfo" component={CocolisapInfoScreen} options={{ headerShown: false }} />
       <Stack.Screen name="cocolisapManagement" component={CocolisapManageScreen} options={{ headerShown: false }} />
     </Stack.Navigator>

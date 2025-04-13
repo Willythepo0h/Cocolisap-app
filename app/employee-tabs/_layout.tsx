@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import EmployeeScreen from ".";
 import CameraScreen from "./camera";
+import ResultScreen from "./resultDisplay";
 import EmployeeDashboardScreen from "./dashboard";
 import UploadDisplayScreen from "./uploadDisplay";
-import ResultScreen from "./resultDisplay";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -36,7 +36,6 @@ export default function EmployeeLayout () {
   return (
     <Stack.Navigator>
       <Stack.Screen name="MainTabs" component={EmployeeBottomNavigation} options={{ headerShown: false }} />
-
       <Stack.Screen name="uploadDisplay" component={UploadDisplayScreen} options={{ headerShown: false }} />
       <Stack.Screen name="resultDisplay" component={ResultScreen} options={{ headerShown: false }} />
     </Stack.Navigator>

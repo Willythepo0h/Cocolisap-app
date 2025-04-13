@@ -1,6 +1,6 @@
 import { ThemedText } from './ThemedText';
-import { getLocalApiUrl } from '@/getLocalIP';
 import React, { useEffect, useState } from 'react';
+import { getLocalApiUrl } from '@/functions/getLocalIP';
 import { ScrollView, View, StyleSheet, ActivityIndicator } from 'react-native';
 
 const COLUMN_HEADERS = [

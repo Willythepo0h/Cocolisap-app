@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { getLocalApiUrl } from "@/getLocalIP";
+import { getLocalApiUrl } from "@/functions/getLocalIP";
 
 interface User {
     type: "employee"; 

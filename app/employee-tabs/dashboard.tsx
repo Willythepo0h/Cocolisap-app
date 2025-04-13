@@ -1,7 +1,7 @@
-import { getLocalApiUrl } from "@/getLocalIP";
 import { useEffect, useState, useMemo } from "react";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
+import { getLocalApiUrl } from "@/functions/getLocalIP";
 import { StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import LineChartComponent from "@/components/dashboardComponents/LineChartComponent";
 import PieChartComponent from "@/components/dashboardComponents/PieChartComponent";

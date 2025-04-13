@@ -48,7 +48,7 @@ export default function CocolisapInfoScreen() {
               shape on the posterior half of the body.
             </ThemedText>
 
-            <Image source={require('../../assets/images/egg.png')}
+            <Image source={require('../../assets/images/Cocolisap-egg.png')}
               style={styles.contentImage} />
 
             <ThemedText type='link' style={styles.contentLink}
@@ -87,7 +87,7 @@ export default function CocolisapInfoScreen() {
                 </ThemedView>
               </ThemedView>
             
-            <Image source={require('../../assets/images/scale_life_cycle.jpg')}
+            <Image source={require('../../assets/images/Scale_life_cycle.jpg')}
               style={styles.contentImage} resizeMode='stretch'/>
 
             <ThemedText type='link' style={styles.contentLink}
@@ -112,7 +112,7 @@ export default function CocolisapInfoScreen() {
               </ThemedView>
             </ThemedView>
 
-            <Image source={require('../../assets/images/Damage-trees.png')}
+            <Image source={require('../../assets/images/Damaged-trees.png')}
               style={styles.contentImage} />
 
             <ThemedText type='link' style={styles.contentLink}

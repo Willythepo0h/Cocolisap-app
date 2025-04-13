@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import { StyleSheet, ScrollView } from "react-native";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
+import { getLocalApiUrl } from "@/functions/getLocalIP";
 import LineChartComponent from "@/components/dashboardComponents/LineChartComponent";
 import PieChartComponent from "@/components/dashboardComponents/PieChartComponent";
 
@@ -22,21 +23,31 @@ export default function EmployeeDashboardScreen() {
     Moderate: 0,
   });
 
+  const fetchDashboardData = async () => {
+    try {
+      const API_URL = await getLocalApiUrl(8000, "FAST_API_URL");
+
+      const res = await fetch(`${API_URL}/dashboard/summary`);
+      if (!res.ok) throw new Error("Network error");
+
+      const data = await res.json();
+
+      setTotalCocolisap(data.total_cocolisap);
+      setTotalImages(data.total_processed_images);
+      setAvgCocolisap(data.average_cocolisap);
+      setAvgCocolisapHistory(data.cocolisap_history);
+      setClassificationCounts({
+        Healthy: data.classification_counts?.Healthy,
+        Slight: data.classification_counts?.Slight,
+        Moderate: data.classification_counts?.Moderate
+      });
+    } catch (err) {
+      console.error("Failed to fetch summary", err);
+    }
+  };
+
   useEffect(() => {
-    fetch("http://192.168.100.97:8000/dashboard/summary")
-      .then(res => res.json())
-      .then(data => {
-        setTotalCocolisap(data.total_cocolisap);
-        setTotalImages(data.total_processed_images);
-        setAvgCocolisap(data.average_cocolisap);
-        setAvgCocolisapHistory(data.cocolisap_history);
-        setClassificationCounts({
-          Healthy: data.classification_counts?.Healthy,
-          Slight: data.classification_counts?.Slight,
-          Moderate: data.classification_counts?.Moderate
-        });
-      })
-      .catch(err => console.error("Failed to fetch summary", err));
+    fetchDashboardData();
   }, []);
 
   const { pieData, legendItems } = useMemo(() => {
@@ -137,14 +148,14 @@ export default function EmployeeDashboardScreen() {
         />
 
         {avgCocolisapHistory.length > 0 && (
-          <ThemedView style={{ borderWidth: 1, borderRadius: 10, width: '100%', padding: 10, borderColor: "#ccc", overflow: 'hidden'}}>
+          <ThemedView style={{ borderWidth: 1, borderRadius: 10, width: '100%', padding: 10, borderColor: "#ccc", overflow: 'hidden' }}>
             <ThemedText
               type="title"
               style={{ paddingBottom: 10 }}
             >
               Average Cocolisap per Run
             </ThemedText>
-            <LineChartComponent averageValues={avgCocolisapHistory} minDataPoints={10}/>
+            <LineChartComponent averageValues={avgCocolisapHistory} minDataPoints={10} />
           </ThemedView>
         )}
 

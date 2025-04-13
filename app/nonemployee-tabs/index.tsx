@@ -58,7 +58,7 @@ export default function NonEmployeeScreen() {
     <ThemedView style={styles.container}>
       <ParallaxHeader 
         scrollY={scrollY}
-        imageSource={require("../../assets/images/halficon.png")}
+        imageSource={require("../../assets/images/Parallax-icon.png")}
       />
 
       <ScrollView
