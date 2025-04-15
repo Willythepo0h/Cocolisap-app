@@ -64,7 +64,7 @@ const TableComponent: React.FC<TableComponentProps> = ({ data }) => {
 };
 
 const styles = StyleSheet.create({
-    headerRow: { flexDirection: 'row', borderBottomWidth: 1, borderColor: '#ccc'},
+    headerRow: { flexDirection: 'row', borderBottomWidth: 1, borderTopWidth: 1, borderColor: '#ccc'},
     headerCell: {
         padding: 10,
         fontWeight: 'bold',
