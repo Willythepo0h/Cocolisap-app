@@ -1,7 +1,6 @@
+import React from 'react';
 import { ThemedText } from './ThemedText';
-import React, { useEffect, useState } from 'react';
-import { getLocalApiUrl } from '@/functions/getLocalIP';
-import { ScrollView, View, StyleSheet, ActivityIndicator } from 'react-native';
+import { ScrollView, View, StyleSheet } from 'react-native';
 
 const COLUMN_HEADERS = [
     'Timestamp', 'Avg Cocolisap Detected', 'Cocolisap Detected', 'Classification',
@@ -20,42 +19,12 @@ type CocolisapEntry = {
     country: string;
 };
 
-const TableComponent = () => {
-    const [data, setData] = useState<CocolisapEntry[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+type TableComponentProps = {
+    data: CocolisapEntry[];
+  };
+  
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const API_URL = await getLocalApiUrl(8000, "FAST_API_URL");
-            console.log(API_URL);
-      
-            const res = await fetch(`${API_URL}/dashboard/summary`);
-            if (!res.ok) throw new Error("Network error");
-      
-            const json = await res.json();
-            const history = json?.cocolisap_history || [];
-      
-            console.log("Fetched entries:", history.length);
-            setData(history);
-          } catch (err) {
-            console.error(err);
-          } finally {
-            setLoading(false);
-          }
-        };
-      
-        fetchData();
-      }, []);
-
-    if (loading) {
-        return <ActivityIndicator size="large" color="#0000ff" />;
-    }
-
-    if (error) {
-        return <ThemedText style={{ color: 'red' }}>Error: {error}</ThemedText>;
-    }
+const TableComponent: React.FC<TableComponentProps> = ({ data }) => {
 
     if (data.length === 0) {
         return (
@@ -99,12 +68,12 @@ const styles = StyleSheet.create({
     headerCell: {
         padding: 10,
         fontWeight: 'bold',
-        width: 120,
+        width: 150,
         borderRightWidth: 1,
         borderColor: '#eee'
     },
     row: { flexDirection: 'row', borderBottomWidth: 1, borderColor: '#eee' },
-    cell: { padding: 10, width: 120, borderRightWidth: 1, borderColor: '#eee' },
+    cell: { padding: 10, width: 150, borderRightWidth: 1, borderColor: '#eee' },
     scrollContainer: { maxHeight: 400, flexShrink: 1 },
 });
 
