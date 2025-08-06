@@ -74,24 +74,24 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 
 ## 🔍 Core Features
 
-- 🔐 **Role-Based Access**
+- 🔐 **Role-Based Access** (Mobile Application)
   - **Employees**: Full access (`Login`, `Camera`, `Dashboard`, `Detection History`)
   - **Non-employees**: Limited access (`No login required`, basic dashboard view)
 
 - 📷 **Image Capture**  
   Using the `Expo Camera` module
 
-- 🌍 **Geolocation Tagging**  
+- 🌍 **Geolocation Tagging** (Mobile Application)
   Captures `City`, `Region`, `Country`, and GPS coordinates
 
 - 🧠 **Cocolisap Detection**  
   Model served via `FastAPI` backend using `YOLOv5` (instance segmentation)
 
-- 📊 **Dashboard Analytics**  
+- 📊 **Dashboard Analytics** (Mobile Application)
   Line and pie charts summarizing detections
 
-- 🗃️ **Detection History**  
-  Scrollable table with timestamp, results, and fallback for no data
+- 🗃️ **Detection History** (Mobile Application)
+  Scrollable table with timestamp, results, and fallback for no data for Mobile Application while Excel sheets for Prototype Hardware
 
 ---
 
@@ -99,7 +99,7 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 
 - **React Native (Expo)**
 - **YOLOv5** (Instance Segmentation)
-- **FastAPI** (Python backend)
+- **FastAPI** and **MongoDB** (Python backend)
 - **Roboflow** (Image Annotation)
 - **Google Colab** (Model training)
 - **Visual Studio Code** (Development)
