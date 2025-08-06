@@ -91,6 +91,9 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 
 - 🧠 **Cocolisap Detection**  
   Model served via `FastAPI` backend using `YOLOv5` (instance segmentation)
+  | ![Uploaded_Image](Sample_Capture&Result/Captured.jpg) | ![Result_Image](Sample_Capture&Result/Result.png) |
+  |:--:|:--:|
+  | **Captured Image** | **Result(Using Instance Segmentation)** |
 
 - 📊 **Dashboard Analytics** (Mobile Application)
   Line and pie charts summarizing detections
