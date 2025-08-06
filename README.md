@@ -94,8 +94,8 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 
   <table>
     <tr>
-      <td align="center"><img src="Sample_Capture&Result/Captured.jpg" width="250"/><br><b>Captured Image</b></td>
-      <td align="center"><img src="Sample_Capture&Result/Result.png" width="250"/><br><b>Result (Using Instance Segmentation)</b></td>
+      <td align="center"><img src="Sample_Capture&Result/Captured.jpg" width="550"/><br><b>Captured Image</b></td>
+      <td align="center"><img src="Sample_Capture&Result/Result.png" width="550"/><br><b>Result (Using Instance Segmentation)</b></td>
     </tr>
   </table>
 
