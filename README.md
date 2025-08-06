@@ -47,7 +47,7 @@ A feature-rich mobile app built using **React Native (Expo)** designed for field
 | ![Mobile View](Mobile_UI/Mobile_1.png) | ![Mobile View](Mobile_UI/Mobile_2.png) |
 |:--:|:--:|
 | ![Mobile View](Mobile_UI/Mobile_3.png) | ![Mobile View](Mobile_UI/Mobile_4.png) |
-|:--:|:--:|
+
 ---
 
 ## 🔧 Hardware Prototype
