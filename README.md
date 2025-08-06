@@ -1,60 +1,107 @@
-# 📱 Cocolisap Detector (WIP)
+# 📱🔬 Cocolisap Detector (WIP)
 
-A mobile application built with **React Native (Expo)** that utilizes **YOLOv5 instance segmentation** to detect *Cocolisap* infestations from captured or uploaded images. Designed for field deployment, the app includes **role-based access control**, **geolocation tagging**, and a **backend for data processing and visualization**.
+**Cocolisap Detector** is a two-part system for detecting *Cocolisap* infestations in the field using **AI-powered instance segmentation (YOLOv5)**. It consists of:
 
-This project includes both hardware and software components, tailored to meet the goals of supporting pest detection and monitoring in agricultural areas. It is developed in collaboration with the **Philippine Coconut Authority** (PCA) in Quezon City, which provided limited yet essential datasets for image annotation and model training.
+1. **A mobile application** built with **React Native (Expo)** that captures and uploads images, processes them via a cloud backend, and provides a visual dashboard and geolocation tagging.
+2. **A hardware prototype** inspired by a **digital microscope**, which runs the same detection software offline for use in remote areas without internet connectivity.
 
-All training data was created from scratch using annotation tools like **[Roboflow](https://roboflow.com/)**. Development was carried out using platforms such as **Google Colab** and **VS Code**.
+The system is developed in collaboration with the **Philippine Coconut Authority (PCA)**, who provided sample datasets for training and annotation.
 
-> ⚠️ **Note:** This repository is **private** and currently under **active development**. It is not yet ready for public release.
+> ⚠️ **Note:** This repository is **private** and under **active development**. It is not yet ready for public release.
 
 ---
 
-## 🔍 Features
+## 📚 Table of Contents
+
+- [🧠 Project Overview](#-project-overview)
+- [📱 Mobile Application](#-mobile-application)
+- [🔧 Hardware Prototype](#-hardware-prototype)
+- [🔍 Core Features](#-core-features)
+- [🛠️ Tools & Technologies](#-tools--technologies)
+- [🤝 Acknowledgment](#-acknowledgment)
+
+---
+
+## 🧠 Project Overview
+
+The **Cocolisap Detector** project aims to support early detection of *Cocolisap* pests in coconut plantations. It provides tools for both field agents with internet access (via mobile app) and those operating in remote areas (via offline prototype).
+
+- All detection is powered by a custom-trained **YOLOv5 instance segmentation** model.
+- Training data was annotated from scratch using **[Roboflow](https://roboflow.com/)**.
+- Development tools include **Google Colab**, **FastAPI**, and **VS Code**.
+
+---
+
+## 📱 Mobile Application
+
+A feature-rich mobile app built using **React Native (Expo)** designed for field workers and researchers. It includes:
+
+- Image capture using the device camera
+- Upload to a **FastAPI** backend for AI-based segmentation
+- Real-time **geolocation tagging**
+- Access to a **data dashboard**, **detection history**, and **role-based access control**
+
+> 🛜 **Note:** Requires internet connection for full functionality.
+
+---
+
+## 🔧 Hardware Prototype
+
+A standalone hardware version of the app, designed to **mimic a microscope**. Built for field use where internet connectivity is unreliable or unavailable.
+
+### Key Differences:
+- **Offline** detection (no internet required)
+- Same YOLOv5-based segmentation
+- No dashboard, login, or history features
+- Captures and processes images locally
+- Ideal for quick detection in remote locations
+
+### 📷 Prototype Images
+
+| Prototype (Front View) | Prototype (Top View) |
+|------------------------|----------------------|
+| ![Prototype Front](./images/prototype_front.jpg) | ![Prototype Top](./images/prototype_top.jpg) |
+
+> ℹ️ *Update the image paths as needed.*
+
+---
+
+## 🔍 Core Features
 
 - 🔐 **Role-Based Access**
   - **Employees**: Full access (`Login`, `Camera`, `Dashboard`, `Detection History`)
-  - **Non-employees**: Limited access (`No login required`, basic access to dashboard)
+  - **Non-employees**: Limited access (`No login required`, basic dashboard view)
 
 - 📷 **Image Capture**  
-  Capture pest images using the `Expo Camera` module.
+  Using the `Expo Camera` module
 
 - 🌍 **Geolocation Tagging**  
-  Automatically tags detections with:
-  - `City`, `Region`, `Country`
-  - `Latitude` / `Longitude`
+  Captures `City`, `Region`, `Country`, and GPS coordinates
 
 - 🧠 **Cocolisap Detection**  
-  Powered by a **YOLOv5** instance segmentation model served through a **FastAPI** backend.
+  Model served via `FastAPI` backend using `YOLOv5` (instance segmentation)
 
-- 📊 **Data Dashboard**  
-  Visual analytics with:
-  - Line graphs  
-  - Pie charts  
-  - Summary indicators
+- 📊 **Dashboard Analytics**  
+  Line and pie charts summarizing detections
 
 - 🗃️ **Detection History**  
-  Scrollable table with logs of previous detections, includes:
-  - Timestamp, image reference, result, location  
-  - `No data` fallback for empty history
+  Scrollable table with timestamp, results, and fallback for no data
 
 ---
 
-## 📂 Tools Used
+## 🛠️ Tools & Technologies
 
 - **React Native (Expo)**
 - **YOLOv5** (Instance Segmentation)
-- **FastAPI**
-- **Roboflow** (Annotation)
+- **FastAPI** (Python backend)
+- **Roboflow** (Image Annotation)
 - **Google Colab** (Model training)
-- **VS Code** (Development)
+- **Visual Studio Code** (Development)
 
 ---
 
 ## 🤝 Acknowledgment
 
-Developed in collaboration with the **Philippine Coconut Authority (PCA)**, Quezon City, Philippines.
+This project is developed in partnership with the **Philippine Coconut Authority (PCA)**, Quezon City, Philippines, who provided annotated images and domain knowledge.
 
 ---
-
-> 💡 *Let me know if you want to add installation steps or a contributor's guide when you're ready to go public.*
