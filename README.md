@@ -61,8 +61,9 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 | Prototype (Front View) | Prototype (Top View) |
 |------------------------|----------------------|
 | ![Prototype Front](Prototype_Images/Front_Prototype.png) | ![Prototype Top](Prototype_Images/Top_Prototype.png) |
-|------------------------|----------------------|
+<br></br>
 | Prototype (Lateral View) | Prototype (Underside View) |
+|------------------------|----------------------|
 | ![Prototype Front](Prototype_Images/Front_Prototype.png) | ![Prototype Top](Prototype_Images/Top_Prototype.png) |
 
 ---
