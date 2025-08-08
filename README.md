@@ -7,8 +7,7 @@
 
 The system is developed in collaboration with the **Philippine Coconut Authority (PCA)**, who provided sample datasets for training and annotation.
 
-> ⚠️ **Note:** This repository is **private** and under **active development**. It is not yet ready for public release.
-
+> ⚠️ **Note:** Note: This repository contains only general and limited information about the project. All detailed specifications, source code(model training), datasets, and other proprietary materials are covered by a Non-Disclosure Agreement (NDA) wth the Philippine Coconut Authority and cannot be publicly shared. The content here represents prototype versions and high-level overviews intended solely for public reference.
 ---
 
 ## 📚 Table of Contents
