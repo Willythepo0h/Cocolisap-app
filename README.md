@@ -119,6 +119,6 @@ A standalone hardware version of the app, designed to **mimic a microscope**. Bu
 
 ## 🤝 Acknowledgment
 
-This project is developed in partnership with the **Philippine Coconut Authority (PCA)**, Quezon City, Philippines, who provided annotated images and domain knowledge.
+This project is developed in partnership with the **Philippine Coconut Authority (PCA)**, Quezon City, Philippines, who provided raw images used for the project and domain knowledge.
 
 ---
